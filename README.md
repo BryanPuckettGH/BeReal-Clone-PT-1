@@ -35,12 +35,7 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-<!-- Replace this with your actual Loom or YouTube embed/link -->
-<div>
-    <a href="REPLACE_WITH_YOUR_LOOM_LINK">
-      <p>BeReal Clone - Video Walkthrough</p>
-    </a>
-</div>
+<img src="bereal-demo.gif" width="300" alt="BeReal Clone Demo"/>
 
 ## Notes
 
