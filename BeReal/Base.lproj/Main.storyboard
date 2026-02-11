@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LoginVC">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="login-scene">
+            <objects>
+                <viewController id="LoginVC" customClass="LoginViewController" customModuleProvider="target" storyboardIdentifier="LoginViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="login-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BeReal." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="login-title">
+                                <rect key="frame" x="97" y="180" width="200" height="50"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="login-username">
+                                <rect key="frame" x="40" y="320" width="313" height="44"/>
+                                <color key="backgroundColor" red="0.2" green="0.2" blue="0.2" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="login-password">
+                                <rect key="frame" x="40" y="380" width="313" height="44"/>
+                                <color key="backgroundColor" red="0.2" green="0.2" blue="0.2" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="login-button">
+                                <rect key="frame" x="40" y="450" width="313" height="50"/>
+                                <color key="backgroundColor" red="0.35" green="0.34" blue="0.84" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="login-btn-h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onLoginTapped:" destination="LoginVC" eventType="touchUpInside" id="login-action"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="signup-link">
+                                <rect key="frame" x="40" y="520" width="313" height="30"/>
+                                <state key="normal" title="Don't have an account? Sign Up">
+                                    <color key="titleColor" white="0.7" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="SignUpVC" kind="show" id="toSignUp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="login-title" firstAttribute="centerX" secondItem="login-view" secondAttribute="centerX" id="c1"/>
+                            <constraint firstItem="login-title" firstAttribute="top" secondItem="login-safe" secondAttribute="top" constant="120" id="c2"/>
+                            <constraint firstItem="login-username" firstAttribute="leading" secondItem="login-safe" secondAttribute="leading" constant="40" id="c3"/>
+                            <constraint firstItem="login-safe" firstAttribute="trailing" secondItem="login-username" secondAttribute="trailing" constant="40" id="c4"/>
+                            <constraint firstItem="login-username" firstAttribute="top" secondItem="login-title" secondAttribute="bottom" constant="90" id="c5"/>
+                            <constraint firstItem="login-username" firstAttribute="height" constant="44" id="c5b"/>
+                            <constraint firstItem="login-password" firstAttribute="leading" secondItem="login-username" secondAttribute="leading" id="c6"/>
+                            <constraint firstItem="login-password" firstAttribute="trailing" secondItem="login-username" secondAttribute="trailing" id="c7"/>
+                            <constraint firstItem="login-password" firstAttribute="top" secondItem="login-username" secondAttribute="bottom" constant="16" id="c8"/>
+                            <constraint firstItem="login-password" firstAttribute="height" constant="44" id="c8b"/>
+                            <constraint firstItem="login-button" firstAttribute="leading" secondItem="login-username" secondAttribute="leading" id="c9"/>
+                            <constraint firstItem="login-button" firstAttribute="trailing" secondItem="login-username" secondAttribute="trailing" id="c10"/>
+                            <constraint firstItem="login-button" firstAttribute="top" secondItem="login-password" secondAttribute="bottom" constant="26" id="c11"/>
+                            <constraint firstItem="signup-link" firstAttribute="centerX" secondItem="login-view" secondAttribute="centerX" id="c12"/>
+                            <constraint firstItem="signup-link" firstAttribute="top" secondItem="login-button" secondAttribute="bottom" constant="20" id="c13"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="login-safe"/>
+                    </view>
+                    <connections>
+                        <outlet property="usernameTextField" destination="login-username" id="o-login-user"/>
+                        <outlet property="passwordTextField" destination="login-password" id="o-login-pass"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="login-fr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-200" y="0"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="signup-scene">
+            <objects>
+                <viewController id="SignUpVC" customClass="SignUpViewController" customModuleProvider="target" storyboardIdentifier="SignUpViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="signup-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BeReal." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="signup-title">
+                                <rect key="frame" x="97" y="180" width="200" height="50"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="signup-username">
+                                <rect key="frame" x="40" y="300" width="313" height="44"/>
+                                <color key="backgroundColor" red="0.2" green="0.2" blue="0.2" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="signup-email">
+                                <rect key="frame" x="40" y="360" width="313" height="44"/>
+                                <color key="backgroundColor" red="0.2" green="0.2" blue="0.2" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="signup-password">
+                                <rect key="frame" x="40" y="420" width="313" height="44"/>
+                                <color key="backgroundColor" red="0.2" green="0.2" blue="0.2" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="signup-button">
+                                <rect key="frame" x="40" y="490" width="313" height="50"/>
+                                <color key="backgroundColor" red="0.35" green="0.34" blue="0.84" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="su-btn-h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onSignUpTapped:" destination="SignUpVC" eventType="touchUpInside" id="signup-action"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="signup-title" firstAttribute="centerX" secondItem="signup-view" secondAttribute="centerX" id="su-c1"/>
+                            <constraint firstItem="signup-title" firstAttribute="top" secondItem="signup-safe" secondAttribute="top" constant="120" id="su-c2"/>
+                            <constraint firstItem="signup-username" firstAttribute="leading" secondItem="signup-safe" secondAttribute="leading" constant="40" id="su-c3"/>
+                            <constraint firstItem="signup-safe" firstAttribute="trailing" secondItem="signup-username" secondAttribute="trailing" constant="40" id="su-c4"/>
+                            <constraint firstItem="signup-username" firstAttribute="top" secondItem="signup-title" secondAttribute="bottom" constant="70" id="su-c5"/>
+                            <constraint firstItem="signup-username" firstAttribute="height" constant="44" id="su-c5b"/>
+                            <constraint firstItem="signup-email" firstAttribute="leading" secondItem="signup-username" secondAttribute="leading" id="su-c6"/>
+                            <constraint firstItem="signup-email" firstAttribute="trailing" secondItem="signup-username" secondAttribute="trailing" id="su-c7"/>
+                            <constraint firstItem="signup-email" firstAttribute="top" secondItem="signup-username" secondAttribute="bottom" constant="16" id="su-c8"/>
+                            <constraint firstItem="signup-email" firstAttribute="height" constant="44" id="su-c8b"/>
+                            <constraint firstItem="signup-password" firstAttribute="leading" secondItem="signup-username" secondAttribute="leading" id="su-c9"/>
+                            <constraint firstItem="signup-password" firstAttribute="trailing" secondItem="signup-username" secondAttribute="trailing" id="su-c10"/>
+                            <constraint firstItem="signup-password" firstAttribute="top" secondItem="signup-email" secondAttribute="bottom" constant="16" id="su-c11"/>
+                            <constraint firstItem="signup-password" firstAttribute="height" constant="44" id="su-c11b"/>
+                            <constraint firstItem="signup-button" firstAttribute="leading" secondItem="signup-username" secondAttribute="leading" id="su-c12"/>
+                            <constraint firstItem="signup-button" firstAttribute="trailing" secondItem="signup-username" secondAttribute="trailing" id="su-c13"/>
+                            <constraint firstItem="signup-button" firstAttribute="top" secondItem="signup-password" secondAttribute="bottom" constant="26" id="su-c14"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="signup-safe"/>
+                    </view>
+                    <connections>
+                        <outlet property="usernameTextField" destination="signup-username" id="o-su-user"/>
+                        <outlet property="emailTextField" destination="signup-email" id="o-su-email"/>
+                        <outlet property="passwordTextField" destination="signup-password" id="o-su-pass"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="signup-fr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="600" y="0"/>
+        </scene>
+        <!--Feed Navigation Controller-->
+        <scene sceneID="feed-nav-scene">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FeedNavC" storyboardIdentifier="FeedNavigationController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="feed-navbar">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="FeedVC" kind="relationship" relationship="rootViewController" id="feed-root-seg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="feednav-fr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-200" y="800"/>
+        </scene>
+        <!--Feed View Controller-->
+        <scene sceneID="feed-scene">
+            <objects>
+                <viewController id="FeedVC" customClass="FeedViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="feed-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLine" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="feed-table">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="440" id="post-cell" customClass="PostCell" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="440"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="post-cell" id="cell-content">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="440"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cell-username">
+                                                    <rect key="frame" x="16" y="8" width="361" height="20"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location · Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cell-location-time">
+                                                    <rect key="frame" x="16" y="30" width="361" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.6" green="0.6" blue="0.6" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cell-image">
+                                                    <rect key="frame" x="0.0" y="52" width="393" height="300"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="300" id="img-h"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cell-caption">
+                                                    <rect key="frame" x="16" y="360" width="361" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cell-date">
+                                                    <rect key="frame" x="16" y="386" width="361" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.6" green="0.6" blue="0.6" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="cell-username" firstAttribute="leading" secondItem="cell-content" secondAttribute="leadingMargin" id="cc1"/>
+                                                <constraint firstItem="cell-content" firstAttribute="trailingMargin" secondItem="cell-username" secondAttribute="trailing" id="cc2"/>
+                                                <constraint firstItem="cell-username" firstAttribute="top" secondItem="cell-content" secondAttribute="top" constant="8" id="cc3"/>
+                                                <constraint firstItem="cell-location-time" firstAttribute="leading" secondItem="cell-content" secondAttribute="leadingMargin" id="cc3a"/>
+                                                <constraint firstItem="cell-content" firstAttribute="trailingMargin" secondItem="cell-location-time" secondAttribute="trailing" id="cc3b"/>
+                                                <constraint firstItem="cell-location-time" firstAttribute="top" secondItem="cell-username" secondAttribute="bottom" constant="2" id="cc3c"/>
+                                                <constraint firstItem="cell-image" firstAttribute="leading" secondItem="cell-content" secondAttribute="leading" id="cc4"/>
+                                                <constraint firstItem="cell-image" firstAttribute="trailing" secondItem="cell-content" secondAttribute="trailing" id="cc5"/>
+                                                <constraint firstItem="cell-image" firstAttribute="top" secondItem="cell-location-time" secondAttribute="bottom" constant="6" id="cc6"/>
+                                                <constraint firstItem="cell-caption" firstAttribute="leading" secondItem="cell-content" secondAttribute="leadingMargin" id="cc7"/>
+                                                <constraint firstItem="cell-content" firstAttribute="trailingMargin" secondItem="cell-caption" secondAttribute="trailing" id="cc8"/>
+                                                <constraint firstItem="cell-caption" firstAttribute="top" secondItem="cell-image" secondAttribute="bottom" constant="8" id="cc9"/>
+                                                <constraint firstItem="cell-date" firstAttribute="leading" secondItem="cell-content" secondAttribute="leadingMargin" id="cc10"/>
+                                                <constraint firstItem="cell-content" firstAttribute="trailingMargin" secondItem="cell-date" secondAttribute="trailing" id="cc11"/>
+                                                <constraint firstItem="cell-date" firstAttribute="top" secondItem="cell-caption" secondAttribute="bottom" constant="6" id="cc12"/>
+                                                <constraint firstItem="cell-content" firstAttribute="bottom" secondItem="cell-date" secondAttribute="bottom" constant="16" id="cc13"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="usernameLabel" destination="cell-username" id="o-cell-user"/>
+                                            <outlet property="locationTimeLabel" destination="cell-location-time" id="o-cell-loctime"/>
+                                            <outlet property="postImageView" destination="cell-image" id="o-cell-img"/>
+                                            <outlet property="captionLabel" destination="cell-caption" id="o-cell-cap"/>
+                                            <outlet property="dateLabel" destination="cell-date" id="o-cell-date"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="feed-table" firstAttribute="top" secondItem="feed-safe" secondAttribute="top" id="ft1"/>
+                            <constraint firstItem="feed-table" firstAttribute="leading" secondItem="feed-safe" secondAttribute="leading" id="ft2"/>
+                            <constraint firstItem="feed-table" firstAttribute="trailing" secondItem="feed-safe" secondAttribute="trailing" id="ft3"/>
+                            <constraint firstItem="feed-table" firstAttribute="bottom" secondItem="feed-view" secondAttribute="bottom" id="ft4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="feed-safe"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="BeReal." id="feed-navitem">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="logout-btn">
+                            <connections>
+                                <action selector="onLogoutTapped:" destination="FeedVC" id="logout-action"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="post-btn">
+                            <connections>
+                                <segue destination="PostVC" kind="show" id="toPost"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="feed-table" id="o-feed-table"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="feed-fr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="600" y="800"/>
+        </scene>
+        <!--Post View Controller-->
+        <scene sceneID="post-scene">
+            <objects>
+                <viewController id="PostVC" customClass="PostViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="post-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="post-imageview">
+                                <rect key="frame" x="16" y="120" width="361" height="300"/>
+                                <color key="backgroundColor" red="0.15" green="0.15" blue="0.15" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="pimg-h"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No location detected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="post-location-label">
+                                <rect key="frame" x="16" y="428" width="361" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.6" green="0.6" blue="0.6" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a caption..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="post-caption">
+                                <rect key="frame" x="16" y="454" width="361" height="44"/>
+                                <color key="backgroundColor" red="0.2" green="0.2" blue="0.2" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pick-photo-btn">
+                                <rect key="frame" x="16" y="514" width="361" height="50"/>
+                                <color key="backgroundColor" red="0.2" green="0.2" blue="0.2" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="pp-h"/>
+                                </constraints>
+                                <state key="normal" title="Pick a Photo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onPickPhotoTapped:" destination="PostVC" eventType="touchUpInside" id="pick-action"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="share-btn">
+                                <rect key="frame" x="16" y="580" width="361" height="50"/>
+                                <color key="backgroundColor" red="0.35" green="0.34" blue="0.84" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="sh-h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Share Post">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onShareTapped:" destination="PostVC" eventType="touchUpInside" id="share-action"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="post-imageview" firstAttribute="top" secondItem="post-safe" secondAttribute="top" constant="16" id="pc1"/>
+                            <constraint firstItem="post-imageview" firstAttribute="leading" secondItem="post-safe" secondAttribute="leading" constant="16" id="pc2"/>
+                            <constraint firstItem="post-safe" firstAttribute="trailing" secondItem="post-imageview" secondAttribute="trailing" constant="16" id="pc3"/>
+                            <constraint firstItem="post-location-label" firstAttribute="top" secondItem="post-imageview" secondAttribute="bottom" constant="8" id="pc3d"/>
+                            <constraint firstItem="post-location-label" firstAttribute="leading" secondItem="post-imageview" secondAttribute="leading" id="pc3e"/>
+                            <constraint firstItem="post-location-label" firstAttribute="trailing" secondItem="post-imageview" secondAttribute="trailing" id="pc3f"/>
+                            <constraint firstItem="post-caption" firstAttribute="top" secondItem="post-location-label" secondAttribute="bottom" constant="8" id="pc4"/>
+                            <constraint firstItem="post-caption" firstAttribute="leading" secondItem="post-imageview" secondAttribute="leading" id="pc5"/>
+                            <constraint firstItem="post-caption" firstAttribute="trailing" secondItem="post-imageview" secondAttribute="trailing" id="pc6"/>
+                            <constraint firstItem="post-caption" firstAttribute="height" constant="44" id="pc6b"/>
+                            <constraint firstItem="pick-photo-btn" firstAttribute="top" secondItem="post-caption" secondAttribute="bottom" constant="16" id="pc7"/>
+                            <constraint firstItem="pick-photo-btn" firstAttribute="leading" secondItem="post-imageview" secondAttribute="leading" id="pc8"/>
+                            <constraint firstItem="pick-photo-btn" firstAttribute="trailing" secondItem="post-imageview" secondAttribute="trailing" id="pc9"/>
+                            <constraint firstItem="share-btn" firstAttribute="top" secondItem="pick-photo-btn" secondAttribute="bottom" constant="16" id="pc10"/>
+                            <constraint firstItem="share-btn" firstAttribute="leading" secondItem="post-imageview" secondAttribute="leading" id="pc11"/>
+                            <constraint firstItem="share-btn" firstAttribute="trailing" secondItem="post-imageview" secondAttribute="trailing" id="pc12"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="post-safe"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Post" id="post-navitem"/>
+                    <connections>
+                        <outlet property="previewImageView" destination="post-imageview" id="o-post-img"/>
+                        <outlet property="captionTextField" destination="post-caption" id="o-post-cap"/>
+                        <outlet property="locationLabel" destination="post-location-label" id="o-post-loc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="post-fr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1400" y="800"/>
+        </scene>
+    </scenes>
+</document>
