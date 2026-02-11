@@ -1,6 +1,7 @@
 # Project 2 - *BeReal Clone*
 
 Submitted by: **Bryan Puckett**
+https://share.cleanshot.com/26rTZnDz
 
 **BeReal Clone** is an app that allows users to share photos from their library with optional captions, view a feed of posts, and see the location and time of each photo upload -- inspired by the popular BeReal app.
 
@@ -20,7 +21,7 @@ The following **required** functionality is completed:
 The following **optional** features are implemented:
 
 - [x] Users can pull to refresh their feed and see a loading indicator
-- [ ] Users can infinite-scroll in their feed to see past the 10 most recent photos
+- [x] Users can infinite-scroll in their feed to see past the 10 most recent photos
 - [x] Users can see location and time of photo upload in the feed
 - [x] User stays logged in when app is closed and open again
 
