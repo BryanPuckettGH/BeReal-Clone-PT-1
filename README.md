@@ -1,9 +1,10 @@
 # Project 2 - *BeReal Clone*
 
 Submitted by: **Bryan Puckett**
-![2026-01-11 at 11 05 35]([https://github.com/user-attachments/assets/da3f28c7-1390-486a-bd22-2106a9605a14](https://share.cleanshot.com/26rTZnDz
-))
         
+## Video Walkthrough
+
+<img src="bereal-demo.gif" width="300" alt="BeReal Clone Demo"/>
 
 **BeReal Clone** is an app that allows users to share photos from their library with optional captions, view a feed of posts, and see the location and time of each photo upload -- inspired by the popular BeReal app.
 
@@ -33,9 +34,6 @@ The following **additional** features are implemented:
 - [x] Keyboard dismissal via tap gesture and Done button for better UX
 - [x] Reverse geocoding of photo metadata to display human-readable location names
 
-## Video Walkthrough
-
-<img src="bereal-demo.gif" width="300" alt="BeReal Clone Demo"/>
 
 ## Notes
 
