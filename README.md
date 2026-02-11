@@ -1,7 +1,7 @@
 # Project 2 - *BeReal Clone*
 
 Submitted by: **Bryan Puckett**
-        
+
 ## Video Walkthrough
 
 <img src="bereal-demo.gif" width="300" alt="BeReal Clone Demo"/>
@@ -34,12 +34,12 @@ The following **additional** features are implemented:
 - [x] Keyboard dismissal via tap gesture and Done button for better UX
 - [x] Reverse geocoding of photo metadata to display human-readable location names
 
-
 ## Notes
 
-- Handled Parse session token invalidation (error code 209) by validating the session on app launch and automatically logging the user out when a stale token is detected.
-- Used PHPickerViewController with PHPickerConfiguration(photoLibrary:) to access photo asset identifiers for extracting GPS metadata from selected photos.
-- Implemented reverse geocoding using MapKit's MKReverseGeocodingRequest to convert photo coordinates into readable location strings.
+- Learned how to work with Parse/Back4App as a backend for user authentication and data storage
+- Handled session token invalidation to automatically log out users with expired sessions
+- Used PHPickerViewController to access photo metadata and extract GPS coordinates
+- Implemented reverse geocoding to convert photo coordinates into readable location names
 
 ## License
 
